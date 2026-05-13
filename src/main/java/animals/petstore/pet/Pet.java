@@ -1,14 +1,17 @@
 package animals.petstore.pet;
 
+import animals.AnimalType;
+import animals.petstore.pet.attributes.Breed;
 import animals.petstore.pet.attributes.Gender;
 import animals.petstore.pet.attributes.PetType;
+import animals.petstore.pet.attributes.Skin;
 
 import java.math.BigDecimal;
 
 /**
  * Pet class is a type really for Domestic Animals
  */
-public class Pet extends AbstractPet
+public abstract class Pet extends AbstractPet
 {
     private BigDecimal cost;
 
@@ -40,6 +43,13 @@ public class Pet extends AbstractPet
         this.petStoreId=petStoreId;
     }
 
+    public Pet(AnimalType animalType, Skin skin, Gender gender, Breed breed, BigDecimal price, int petStoreId) {
+        this.gender = gender;
+        this.petType = petType;
+        this.cost = cost;
+        this.petStoreId = petStoreId;
+    }
+
     /**
      * {@inheritDoc}
      */
@@ -66,6 +76,8 @@ public class Pet extends AbstractPet
     {
         return this.petStoreId;
     }
+
+    public abstract String speak();
 
     @Override
     public String toString()

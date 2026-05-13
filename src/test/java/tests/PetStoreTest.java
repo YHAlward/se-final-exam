@@ -130,4 +130,18 @@ public class PetStoreTest
         assertTrue(Numbers.isEven(number));
     }
 
+    @Test
+    @DisplayName("Dog Hypoallergenic False Test")
+    public void dogHypoallergenicFalseTest()
+    {
+        Dog dog = new Dog(
+                AnimalType.DOMESTIC,
+                Skin.FUR,
+                Gender.MALE,
+                Breed.GERMAN_SHEPARD
+        );
+
+        assertEquals("The dog is not hyperallergetic!", dog.dogHypoallergenic());
+    }
+
 }

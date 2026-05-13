@@ -4,6 +4,7 @@ import animals.AnimalType;
 import animals.petstore.pet.attributes.Breed;
 import animals.petstore.pet.attributes.Gender;
 import animals.petstore.pet.attributes.Skin;
+import animals.petstore.pet.types.Bird;
 import animals.petstore.pet.types.Cat;
 import animals.petstore.pet.types.Dog;
 
@@ -18,5 +19,8 @@ public class Main {
 
         Cat cat = new Cat(AnimalType.DOMESTIC, Skin.FUR, Gender.MALE, Breed.BURMESE);
         System.out.println(cat.toString());
+
+        Bird bird = new Bird(AnimalType.DOMESTIC, Skin.FEATHERS, Gender.MALE, Breed.CARDINAL);
+        System.out.println(bird);
     }
 }
